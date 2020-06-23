@@ -1,1 +1,1 @@
-# SEG3525-Lab5
+https://rjstead.github.io/SEG3525-Lab5/

@@ -1,0 +1,309 @@
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- header.jpg taken from https://www.cambridgemaths.org/Images/intesection-maths-bicycle-header.jpg -->
+<!-- mechanic.png taken from https://www.netclipart.com/isee/TiioiR_mechanic-clipart-builder-handyman-clipart/ -->
+<!-- wheel-alignment.jpg taken from https://www.vartools.com/images/photos/produits/499_1227_491_XL.PNG -->
+<!-- replace-tire.jpg taken from https://www.wikihow.com/images/thumb/f/fb/Replace-a-Bicycle-Tire-Step-14-Version-6.jpg/550px-nowatermark-Replace-a-Bicycle-Tire-Step-14-Version-6.jpg.webp -->
+<!-- repair-brakes.jpg taken from https://i.ytimg.com/vi/6ktT21QxYcQ/maxresdefault.jpg -->
+<!-- full-maintenance.jpg taken from https://i0.wp.com/bicycleuniverse.com/wp-content/uploads/2018/06/Bike-Maintenance.jpg -->
+<!-- mechanics.png taken from https://static.thenounproject.com/png/215117-200.png -->
+<!-- services.png taken from https://static.thenounproject.com/png/842366-200.png -->
+<!-- payment.png taken from https://icons-for-free.com/money+payment+icon-1320165997481413640/ -->
+<!-- calendar.png taken from https://img.icons8.com/carbon-copy/2x/calendar.png-->
+<!-- book.png taken from https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Black_book_icon.svg/1200px-Black_book_icon.svg.png -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>Steve's Bikes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+	
+	<!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
+    <!-- which is built on top of JQuery and offers additional possibilities -->
+    <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	
+	<script src="scripts/service.js"></script>
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+	<!-- Using the collapsible Navbar, so we see the hamburger menu icon -->
+	<!-- It really has become a standard. -->
+	<!-- As your page is a vertical page (Module 4 requirement), you mus use the navbar -->
+	<!-- to just jump to parts of the page. What I put as First/Second/Third here would -->
+	<!-- be sections in your page. -->
+	<nav class="navigationbar">
+	  <a href="#" class="navbaritem"><img src="images/Logo.png" style="width:4%;"></img></a>
+		<a href="#mechanic" class="navbaritem"><img src="images/mechanics.png" style="width:30px;">Mechanics</a>
+		<a href="#services" class="navbaritem"><img src="images/services.png" style="width:30px;">Services</a>
+		<a href="#book" class="navbaritem"><img src="images/book.png" style="width:30px;">Book</a>
+		<a href="#date" class="navbaritem"><img src="images/calendar.png" style="width:30px;">Calendar</a>
+		<a href="#card" class="navbaritem"><img src="images/payment.png" style="width:30px;">Payment</a>
+	  </div>  
+	</nav>
+	
+	<div class="container text-center p-5 introdiv">
+		<div class="row">
+			<div class="col-6">
+				<img src="images/header.jpg" style="border: solid 3px; width: 120%;">
+			</div>
+			<div class="col-6">
+				<div class="container border bg-primary text-white" style="max-width: 50%;">
+					<h3 class="p-3"><br>Steve's bicycles is a bicycle service shop that has been around for over 25 years.</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Presenting the staff with cards: https://www.w3schools.com/bootstrap4/bootstrap_cards.asp -->
+    <!-- Card columns allows multiple cards next to each other -->
+    <!-- The first card's button doesn't go anywhere, it could be a modal --> 
+    <!-- My second card limits the information seen and uses collapsible to show more -->
+    <div id="mechanic" class="container p-1">
+        <h2>Meet our mechanics</h2>
+        <div class="card-columns text-white">
+            <div class="card bg-secondary" style="width:200px">
+                <img class="card-img-top" src="images/mechanic.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Steve</h4>
+                    <p class="card-text">Owner</p>
+                    <!-- collapsible part -->
+                    <a href="#profile1" class="btn btn-primary" title="Click to see more" data-toggle="collapse">See Profile</a>
+                    <div id="profile1" class="collapse p-3">
+                        <p>Steve has owned and ran this business for over 25 years.</p>
+                    </div>
+					
+                </div>
+            </div>
+			<div class="card bg-secondary" style="width:200px">
+                <img class="card-img-top" src="images/mechanic.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Tim</h4>
+                    <p class="card-text">Manager</p>
+                    <!-- collapsible part -->
+                    <a href="#profile2" class="btn btn-primary" title="Click to see more" data-toggle="collapse">See Profile</a>
+                    <div id="profile2" class="collapse p-3">
+                        <p>Tim has been a bicycle mechanic for over 20 years. He's proficient at all things bicycle.</p>
+                    </div>
+					
+                </div>
+            </div>
+			
+			<div class="card bg-secondary" style="width:200px">
+                <img class="card-img-top" src="images/mechanic.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">John</h4>
+                    <p class="card-text">Tire specialist</p>
+                    <!-- collapsible part -->
+                    <a href="#profile3" class="btn btn-primary" title="Click to see more" data-toggle="collapse">See Profile</a>
+                    <div id="profile3" class="collapse p-3">
+                        <p>John has been a bicycle mechanic for over 15 years. Specializing on all things wheels.</p>
+                    </div>
+					
+                </div>
+            </div>
+			
+			<div class="card bg-secondary" style="width:200px">
+                <img class="card-img-top" src="images/mechanic.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Bill</h4>
+                    <p class="card-text">Brake specialist</p>
+                    <!-- collapsible part -->
+                    <a href="#profile4" class="btn btn-primary" title="Click to see more" data-toggle="collapse">See Profile</a>
+                    <div id="profile4" class="collapse p-3">
+                        <p>Bill has been a bicycle mechanic for over 5 years. Specializing on all things brakes.</p>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+
+    <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
+    <!-- Might be (or not) useful to show some information to the user -->
+    <div id="services" class="container">
+        <h2>Bike Services</h2>
+        <p>Here are the services offered!</p>            
+        <table class="table table-primary table-hover">
+            <thead>
+            <tr>
+				<th>Price</th>
+                <th>Service</th>
+                <th>Description</th>
+				<th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+				<td>$10</td>
+                <td>Wheel alignment</td>
+                <td>Feeling like your wheels are a little off? We can realign it!</td>
+				<td><img src="images/wheel-alignment.jpg" alt="Wheel alignment" title="Our experts will readjust your wheels" style="width:200px"></td>
+            </tr>
+            <tr>
+				<td>$35/tire</td>
+                <td>Replace tires</td>
+                <td>Flat or old tires? Get brand new high end tires!</td>
+				<td><img src="images/replace-tire.jpg" alt="Replace tires" title="Our experts will pump or replace your tires" style="width:200px"></td>
+            </tr>
+            <tr>
+				<td>$25</td>
+                <td>Repair brakes</td>
+                <td>Having trouble stopping? We can fix or replace your brakes!</td>
+				<td><img src="images/repair-brakes.jpg" alt="Repair brakes" title="Our experts will make your brakes good as new." style="width:200px"></td>
+            </tr>
+			<tr>
+				<td>$80</td>
+                <td>Full bike maintenance</td>
+                <td>We will give your bicycle that new feeling! Returning it to a perfect condition.</td>
+				<td><img src="images/full-maintenance.jpg" alt="Full Maintenance" title="Our experts will reassemble your bike and add lubricant." style="width:200px"></td>
+            </tr>
+			
+            </tbody>
+        </table>
+    </div>
+
+   
+
+    <!-- Collapsible with multiple items - accordion -->
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
+    <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
+    <!-- could work well.  You can use other patterns too.  This is just an example. -->
+    <div id="book" class="container p-3">
+		<h2>Book Servicing</h2>
+		<h4>Servicing location: 83 Birchwood Rd. Ottawa, ON</h4>
+		<p>Setup an appointment for a bicycle maintenance</p>
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" title="Click to toggle panel" href="#collapseService">Choose a service</a>
+                </div>
+                <div id="collapseService" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        <p title="Select the type of appointment you would like to book.">Here is our list of services</p>
+						<!-- Radio buttons -->
+						<!-- https://www.w3schools.com/bootstrap/bootstrap_forms_inputs.asp#:~:text=Bootstrap%20Radio%20Buttons&text=Radio%20buttons%20are%20used%20if,a%20list%20of%20preset%20options. -->
+						<div class="radio">
+							<label><input type="radio" name="servradio" checked>  Wheel alignment - $10</label>
+						</div>
+						<div class="radio">
+							<label><input type="radio" name="servradio">  Replace tires - $35/tire</label>
+						</div>
+						<div class="radio">
+							<label><input type="radio" name="servradio">  Repair brakes - $25</label>
+						</div>
+						<div class="radio">
+							<label><input type="radio" name="servradio">  Full maintenance - $80</label>
+						</div>
+						
+						<br>
+						<p title="Choose who will work on your bicycle.">Select a mechanic</p>
+						<select id="mechanics">
+							<option value="any" selected>Any</option>
+							<option value="steve">Steve</option>
+							<option value="john">John</option>
+							<option value="tim">Tim</option>
+							<option value="bill">Bill</option>
+						</select>
+                    </div>
+                </div>
+            <div id="date" class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" title="Click to toggle panel" href="#collapseDate">Choose a date</a>
+                </div>
+                <div id="collapseDate" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p title="When would you like to be serviced?">What date?</p>
+                        <!-- Bootstrap has various input components. Some examples are given here: -->
+                        <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
+                        <div class="form-group-inline row">
+                            <label for="dateInput" class="col-2 col-form-label">Date</label>
+                            <div class="col-10">
+                                <input class="form-control" type="text" id="dateInput">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" title="Click to toggle panel" href="#collapseClientInfo">Your info</a>
+                </div>
+                <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Your information so we can contact you</p>
+                        <p>Form to enter name, email, phone</p>
+						<div class="form-group">
+							<label for="name" title="Enter your first and last name.">Full Name:</label>
+							<input type="text" class="form-control" id="name">
+						</div>
+						<div class="form-group">
+							<label for="email" title="Enter your email address as a secondary method to notify you.">Email:</label>
+							<input type="text" class="form-control" id="email">
+						</div>
+						<div class="form-group">
+							<label for="textPhone" title="Enter your phone number as the primary method to notify you.">Phone:</label>
+							<input type="text" class="form-control" id="textPhone">
+						</div>
+						<br>
+                    </div>					
+                </div>
+            </div>
+			
+			<div id="card" class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" title="Click to toggle panel" href="#collapseClientCard">Payment</a>
+                </div>
+                <div id="collapseClientCard" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+					<label title="Add credit card in case of last minute cancellations.">Credit card</label> <br>
+					<div class="form-inline">
+                        <div class="form-group">
+							<label class="margin" for="name">Name:</label>
+							<input type="text" class="form-control" id="name">
+						</div>
+						<div class="form-group">
+							<label class="margin" for="textCard">Number:</label>
+							<input type="text" class="form-control" id="textCard">
+						</div>
+					</div>
+					<br>
+					<div class="form-inline">
+						<div class="form-group">
+							<label class="margin" for="exp">Expiration:</label>
+							<input type="text" class="form-control" id="exp">
+						</div>
+						<div class="form-group">
+							<label class="margin" for="cvv">CVV:</label>
+							<input type="text" class="form-control" id="cvv">
+						</div>
+					</div>
+											
+					<div class="p-3">
+						<a class="btn btn-primary text-white" onclick="return validate()">Book</a>
+					</div>
+                    </div>					
+                </div>
+            </div>			
+        </div>
+		
+    </div>
+</body>
+</html>
